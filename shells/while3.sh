@@ -1,13 +1,13 @@
 #!/bin/bash
-row="$1"
-while [[ 10 -gt $row ]]; do
-	if [ $row -lt 1 -o $row -gt 9 ]; then
+row=$1
+	if [ $# -eq 0 ]; then
+	echo "This program require one Parameter.!!."
+	if [ $1 -lt 1 -o $1 -gt 9 ]; then
 		echo "This program is require number 1~9."
 	else
-		for ((k=1;k<=9;k++))do
-        echo "$row - $k = `expr $row \- $k`"
-	echo "$row"
-	row=`echo "$row"+1|bc`
-done
+		while [[ 10 -gt $row ]]; do
+				echo $row
+				row=`echo $row+1 | bc`
+			done
+		fi
 fi
-done
