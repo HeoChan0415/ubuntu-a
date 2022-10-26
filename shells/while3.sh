@@ -1,6 +1,6 @@
 #!/bin/bash
 
-row=$1
+row="$1"
 
 while [[ 10 -gt $row ]]; do
   echo $row
